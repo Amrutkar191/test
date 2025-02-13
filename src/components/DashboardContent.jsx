@@ -70,7 +70,7 @@ export default function DashboardContent() {
       </div>
   
       {!isdbo && (
-      <div className="grid lg:w-[81vw] mt-4 border border-gray-200 rounded-lg">
+      <div className="grid lg:w-[80.5vw] mt-4 border border-gray-200 overflow-hidden rounded-lg">
       {/* Header Row */}
       <div className="grid grid-cols-3 h-[55px] items-center bg-blue-1 text-white font-semibold text-[13px] sm:text-sm md:text-[16px] rounded-tl-[10px] rounded-tr-[10px]">
         <div

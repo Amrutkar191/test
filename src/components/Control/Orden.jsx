@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import SelectBox from "../layout/SelectBox";
+import unfold from '../../assets/svg/unfold.svg'
 const machines = [
   { value: "Máquina1", label: "Máquina 1" },
   { value: "Máquina2", label: "Máquina 2" },
@@ -47,6 +48,8 @@ export default function Orden() {
   const handleFinalize = (index) => {
     setFinalizedRows((prev) => [...prev, index]);
   };
+
+
 
   return (
     <div className="px-4  bg-gray-4 min-h-screen">
@@ -113,10 +116,10 @@ export default function Orden() {
         </div>
 
         {/* Data Table */}
-        <div className="overflow-x-auto rounded border border-gray-100">
+        <div className="overflow-x-auto rounded-[10px] border border-gray-50 font-inter">
           <table className="min-w-full table-auto">
             <thead>
-              <tr className="bg-blue-580">
+              <tr className="bg-[#2A6AB2]">
                 {[
                   "Máquina",
                   "Orden",
@@ -128,17 +131,17 @@ export default function Orden() {
                 ].map((header, index) => (
                   <th
                     key={index}
-                    className="text-white font-medium text-sm px-4 py-2 text-left"
+                    className="text-white h-auto font-semibold text-[14px] leading-[18px] px-4 py-4 text-left"
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center ">
                       {header}
-                      <span className="material-symbols-outlined font-thin">unfold_more</span>
+                      <img src={unfold} className={`h-[16px] ml-[9px]`} />
                     </div>
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody className="text-xs">
+            <tbody className="text-[12px] leading-[14px] h-[20px] font-[350] py-[15px] font-inter">
               {tableData.map((row, index) => (
                 <tr key={index} className={`${row.bgClass}`}>
                   {finalizedRows.includes(index) ? (
@@ -158,7 +161,7 @@ export default function Orden() {
                       <td className="px-4 py-2">{row.fabricated}</td>
                       <td className="px-4 py-2 text-left">
                         <button
-                          className="bg-red-500 text-gray-100 text-[11px] py-1 px-4 rounded"
+                          className="bg-[#C52031] leading-[14px] text-[#ffffff] text-[11px] py-2 px-3 rounded-[5px]"
                           onClick={() => handleFinalize(index)}
                         >
                           Finalizar

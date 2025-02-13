@@ -42,45 +42,77 @@ export default function LoginPage() {
   };
 
   return (
-    <div className=" h-screen flex items-center justify-center bg-white font-inter">
+    <div className="min-h-screen flex flex-col bg-white font-inter">
       <ToastContainer />
 
-      {/* Side Image */}
-      <div className="hidden md:flex w-1/2 justify-center items-center py-6 px-8 ">
-        <img
-          src={sideImage}
-          alt="Side"
-          className="w-full h-auto max-w-[916px] max-h-[1032px] object-cover rounded-lg"
-        />
-      </div>
+      {/* Main Content */}
+      <div className="flex flex-col md:flex-row items-center justify-center 
+           w-full h-screen px-3 sm:px-4 md:px-5 lg:px-6 xl:px-7 2xl:px-8
+           py-[0.875rem] sm:py-[1rem] md:py-[1.125rem] lg:py-[1.25rem] xl:py-[1.375rem] 2xl:py-[1.5rem]">
 
 
 
-      {/* Login Form Section */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-end px-6 md:px-[125px] font-inter">
-        <div className="w-full max-w-md">
-          {/* Logo */}
-          <img src={logo} alt="Company Logo" className="w-[112px] h-[60px] mb-4" />
-          <div className="">
+        {/* Side Image  */}
+        <div className=" realative hidden md:flex 
+           w-1/2 lg:w-[45%] xl:w-[50%] 2xl:w-1/2 
+           justify-center items-center 
+            
+           ">
+          <img
+            src={sideImage}
+            alt="Side"
+            className="w-full 
+           max-w-[57.25rem] sm:max-w-[45rem] md:max-w-[40rem] lg:max-w-[35rem] xl:max-w-[50rem] 2xl:max-w-[57.25rem] 
+           h-auto 
+           max-h-[64.5rem] sm:max-h-[50rem] md:max-h-[45rem] lg:max-h-[40rem] xl:max-h-[55rem] 2xl:max-h-[64.5rem] 
+           object-cover rounded-lg"
+
+          />
+          <h1 className="absolute font-inter text-[32px] mb-[510px] mr-[30px] text-gray-50 ">
+            FCore
+          </h1>
+        </div>
+
+        {/* Login Form Section */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-end mr-[20px] px-6 md:px-[7.8rem]  ">
+          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+            {/* Logo */}
+            <img src={logo} alt="Company Logo" className="w-[6rem] sm:w-[7rem] h-auto mb-4" />
+
             {/* Welcome Text */}
-            <div className="flex items-center gap-2 text-[#141415] mt-3 mb-4">
-              <h1 className="text-[36px] font-semibold leading-[36px] tracking-[0.01em]">Welcome Back</h1>
-              <img src={wavingHand} alt="Waving Hand" className="w-9 h-9" />
+            <div className="flex items-center  text-[#141415] mt-3 mb-4">
+              <h1 className="text-[1.75rem] sm:text-[0.72rem] lg:[1.15rem] xl:text-[1.4375rem] 2xl:text-[1.75rem]  font-semibold tracking-[0.01em]">
+                Welcome Back  👋
+              </h1>
+
             </div>
 
-            <p className="text-[18px] font-normal leading-[32px] tracking-[0.01em] text-[#141415] mt-3 max-w-[454px] max-h-[64px]">
-              Today is a new day. It's your day. You shape it. Sign in to start managing your projects.
+            <p className="text-[1.25rem] 2xl:text-[0.96rem] xl:text-[0.8rem] lg:text-[0.7rem] md:text-[0.65rem] sm:text-[0.6rem] 
+              leading-[2rem] 2xl:leading-[1.8rem] xl:leading-[1.6rem] lg:leading-[1.4rem] md:leading-[1.3rem] sm:leading-[1.2rem]
+              text-[#141415] mt-3 max-w-[28.375rem] 2xl:max-w-[24rem] xl:max-w-[22rem] lg:max-w-[20rem] md:max-w-[18rem] sm:max-w-[16rem]">
+              Today is a new day. It's your day. You shape it.
+              <br />Sign in to start managing your projects.
             </p>
 
             {/* Form */}
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 mt-4">
+            <form onSubmit={handleSubmit(onSubmit)} className=" mt-4 space-y-4">
               {/* Email Input */}
               <div>
-                <label className="block text-[16px] font-semibold text-[#141415] mb-1">Email</label>
+                <label className="block text-[1rem] 2xl:text-[0.875rem] xl:text-[0.8rem] lg:text-[0.75rem] md:text-[0.7rem] sm:text-[0.65rem] 
+                   font-semibold text-[#141415] mb-1">
+                  Email
+                </label>
                 <input
                   type="email"
                   placeholder="Example@email.com"
-                  className="w-full  h-auto max-w-[508px] max-h-[54px] border border-[#E7E7E7] rounded-md bg-[#F2F2F7] px-5 py-[17px] text-[16px] leading-[20px] placeholder-[#98A2B2] focus:ring-2 focus:ring-blue-400 outline-none"
+                  className="w-full h-auto 
+                  max-w-[21.875rem] sm:max-w-[23.75rem] md:max-w-[26.25rem] lg:max-w-[28.125rem] 
+                  max-h-[2.625rem] sm:max-h-[2.75rem] md:max-h-[2.875rem] lg:max-h-[3rem] 
+
+                  border border-[#E7E7E7] rounded-md bg-[#F2F2F7] 
+                  px-5 py-[1rem] sm:py-[0.75rem] text-[1rem] 2xl:text-[0.875rem] xl:text-[0.8rem]
+                  lg:text-[0.75rem] md:text-[0.7rem] sm:text-[0.65rem] focus:ring-2 focus:ring-blue-400 outline-none"
+
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -93,12 +125,22 @@ export default function LoginPage() {
               </div>
 
               {/* Password Input */}
-              <div>
-                <label className="block text-[16px] font-semibold text-[#141415] mb-1">Password</label>
+              <div className="flex flex-col  w-auto max-w-[450px]">
+                <label className="block text-[1rem] 2xl:text-[0.875rem] xl:text-[0.8rem] lg:text-[0.75rem] md:text-[0.7rem] sm:text-[0.65rem] 
+                   font-semibold text-[#141415] mb-1">
+                  Password</label>
                 <input
                   type="password"
                   placeholder="At least 8 characters"
-                  className="w-full  h-auto max-w-[508px] max-h-[54px] border border-[#E7E7E7] rounded-md bg-[#F2F2F7] px-5 py-[17px] text-[16px] leading-[20px] placeholder-[#98A2B2] focus:ring-2 focus:ring-blue-400 outline-none"
+                  className="w-full h-auto 
+                  max-w-[21.875rem] sm:max-w-[23.75rem] md:max-w-[26.25rem] lg:max-w-[28.125rem] 
+                  max-h-[2.625rem] sm:max-h-[2.75rem] md:max-h-[2.875rem] lg:max-h-[3rem] 
+
+                   
+                  border border-[#E7E7E7] rounded-md bg-[#F2F2F7] 
+                  px-5 py-[1rem] sm:py-[0.75rem] text-[1rem] 2xl:text-[0.875rem] xl:text-[0.8rem]
+                  lg:text-[0.75rem] md:text-[0.7rem] sm:text-[0.65rem] focus:ring-2 focus:ring-blue-400 outline-none"
+
                   {...register("password", {
                     required: "Password is required",
                     minLength: { value: 8, message: "Password must be at least 8 characters long" },
@@ -110,23 +152,37 @@ export default function LoginPage() {
                   })}
                 />
                 {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password.message}</p>}
+
+                <div className="flex items-end justify-end  ">
+                  <button
+                    type="button"
+                    onClick={() => navigate("/forgot-password")}
+                    className=" mt-4
+                  text-[1rem] 2xl:text-[0.875rem] xl:text-[0.8rem] lg:text-[0.75rem] md:text-[0.7rem] sm:text-[0.65rem] 
+           font-medium text-[#2A6AB2] hover:text-[#10699E] transition duration-200  "
+
+                  >
+                    Forgot Password?
+                  </button>
+                </div>
               </div>
 
               {/* Forgot Password */}
-              <div className="flex justify-end">
-                <button
-                  type="button"
-                  onClick={() => navigate("/forgot-password")}
-                  className="text-[16px] font-medium text-[#128EC4] hover:text-[#10699E] transition duration-200"
-                >
-                  Forgot Password?
-                </button>
-              </div>
+
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full h-[54px] text-[18px] py-[18px] font-semibold bg-[#179FDB] text-white rounded-md hover:bg-[#128EC4] transition duration-200"
+                className=" w-full h-auto 
+                  max-w-[21.875rem] sm:max-w-[23.75rem] md:max-w-[26.25rem] lg:max-w-[28.125rem] 
+                  max-h-[2.625rem] sm:max-h-[2.75rem] md:max-h-[2.875rem] lg:max-h-[3rem]  
+
+                
+                text-[1rem] sm:text-[0.875rem] md:text-[0.9375rem] lg:text-[1rem] 
+                py-[1rem]
+                font-semibold bg-[#179FDB] text-white rounded-md 
+                hover:bg-[#128EC4] transition duration-200"
+
                 disabled={loading}
               >
                 {loading ? (
@@ -135,21 +191,25 @@ export default function LoginPage() {
                     trigger="loop"
                     state="loop-cycle"
                     colors="primary:#ffffff,secondary:#ffffff"
-                    style={{ width: "20px", height: "20px", padding: "2px" }}
+                    style={{ width: "1.25rem", height: "1.25rem", padding: "0.125rem" }}
                   ></lord-icon>
                 ) : (
                   "Sign In"
                 )}
               </button>
             </form>
+
+
           </div>
+          {/* Footer */}
+          <footer className="absolute bottom-[1px]  w-auto py-4 text-center text-[#98A2B2] text-[0.875rem] sm:text-[1rem] font-normal">
+            Copyright © 2025 - enira lean automation.
+          </footer>
         </div>
 
-        {/* Footer */}
-        <footer className="absolute bottom-4 w-full text-center">
-          <p className="text-xs text-gray-400">© 2025 Enira Lean Automation.</p>
-        </footer>
       </div>
+
+
     </div>
   );
 }

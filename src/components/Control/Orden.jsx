@@ -85,10 +85,10 @@ export default function Orden() {
           />
         </div>
         {/* Button */}
-        <div className="flex flex-col w-full sm:w-auto">
+        <div className="flex flex-col w-full sm:w-auto self-start">
           <label className="invisible mb-1">Button</label>
           <button
-            className="w-full sm:w-[170px] h-[35px] bg-blue-570 text-white text-sm font-medium rounded  hover:bg-blue-590"
+            className="w-full sm:w-[170px] h-[35px] bg-[#179FDB] text-white text-sm font-medium rounded-[6px]  hover:bg-blue-590"
             onClick={handleSubmit(handleStartOrder)}
 
           >
@@ -100,13 +100,13 @@ export default function Orden() {
       {/* Timeline Tabs */}
       <div className="bg-white p-4 rounded border-0">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold">Timeline</h2>
+          <h2 className="text-[20px] leading-[22px] font-semibold font-inter">Timeline</h2>
           <div className="flex gap-1">
             {["Day", "Week", "Month"].map((label, index) => (
               <button
                 key={index}
                 onClick={() => handleTabChange(index)}
-                className={`text-[9px] font-normal px-2 py-2 rounded ${tabValue === index ? "bg-blue-580 text-white" : "text-gray-600"
+                className={`text-[10px] leading-[10px] font-inter font-normal px-2 py-2 rounded ${tabValue === index ? "bg-blue-580 text-white" : "text-gray-600"
                   }`}
               >
                 {label}
@@ -117,9 +117,9 @@ export default function Orden() {
 
         {/* Data Table */}
         <div className="overflow-x-auto rounded-[10px] border border-gray-50 font-inter">
-          <table className="min-w-full table-auto">
+          <table className="min-w-full  table-auto">
             <thead>
-              <tr className="bg-[#2A6AB2]">
+              <tr className="bg-[#2A6AB2] ">
                 {[
                   "Máquina",
                   "Orden",
@@ -131,7 +131,7 @@ export default function Orden() {
                 ].map((header, index) => (
                   <th
                     key={index}
-                    className="text-white h-auto font-semibold text-[14px] leading-[18px] px-4 py-4 text-left"
+                    className="text-white  h-auto font-semibold text-[14px] leading-[18px] px-4 py-4 text-left"
                   >
                     <div className="flex items-center ">
                       {header}
@@ -141,19 +141,20 @@ export default function Orden() {
                 ))}
               </tr>
             </thead>
-            <tbody className="text-[12px] leading-[14px] h-[20px] font-[350] py-[15px] font-inter">
+            <tbody className="text-[12px]  leading-[14px]  font-[350] py-[15px] font-inter">
               {tableData.map((row, index) => (
                 <tr key={index} className={`${row.bgClass}`}>
                   {finalizedRows.includes(index) ? (
                     <>
-                      <td className="px-4 py-2">{row.machine}</td>
-                      <td colSpan={6} className="px-4 py-2 text-center">
+                      <td className="px-4 h-[46px] py-2">{row.machine}</td>
+                      <td colSpan={6} className="px-4 py-2   text-center">
+                        
 
                       </td>
                     </>
                   ) : (
                     <>
-                      <td className="px-4 py-2">{row.machine}</td>
+                      <td className="px-4 py-2  ">{row.machine}</td>
                       <td className="px-4 py-2">{row.order}</td>
                       <td className="px-4 py-2">{row.product}</td>
                       <td className="px-4 py-2">{row.status}</td>

@@ -19,7 +19,9 @@ const SelectBox = ({ label, name, options, placeholder, register, errors }) => {
           </option>
         ))}
       </select>
+      <div className="min-h-[20px] p-[2px]" >
       {errors?.[name] && <p className="text-red-500 text-xs">{errors[name].message}</p>}
+      </div>
     </div>
   );
 };

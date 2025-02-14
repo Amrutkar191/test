@@ -71,27 +71,28 @@ const Scrap = () => {
             errors={errors}
           />
 
+
           {/* Producto Input */}
-          <div>
-            <label className="block text-sm font-medium text-black mb-1">Producto</label>
+          <div className="">
+            <label className="block text-[11px] sm:text-[13px] md:text-[14px] lg:text-[15px] font-[600] text-[#141415] font-inter mb-[6px]">Producto</label>
             <input
               type="text"
               placeholder="Producto"
               value={product}
               onChange={(e) => setProduct(e.target.value)}
-              className="w-full h-[36px] pl-[8px] pr-[8px] bg-white text-xs outline-none font-normal text-gray-700 border border-gray-300 rounded"
+              className="w-full h-[36px] px-[8px] bg-white text-xs outline-none font-normal text-[#98A2B2] border border-[#E7E7E7] rounded-[6px]"
             />
           </div>
 
           {/* Descripción Input */}
           <div className="col-span-1 sm:col-span-2 lg:col-span-3">
-            <label className="block text-sm font-medium text-black mb-1">Descripción</label>
+            <label className="block text-[11px] sm:text-[13px] md:text-[14px] lg:text-[15px] font-[600] text-[#141415] font-inter mb-[6px]">Descripción</label>
             <input
               type="text"
               placeholder="Descripción"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full h-[36px] pl-[8px] pr-[8px] bg-white text-xs outline-none font-normal text-gray-700 border border-gray-300 rounded"
+              className="w-full h-[36px] px-[8px] bg-white text-xs outline-none font-normal text-[#98A2B2] border border-[#E7E7E7] rounded-[6px]"
             />
           </div>
 
@@ -121,7 +122,7 @@ const Scrap = () => {
 
           {/* Cantidad Input */}
           <div>
-            <label className="block text-sm font-medium text-black mb-1">Cantidad</label>
+            <label className="block text-[11px] sm:text-[13px] md:text-[14px] lg:text-[15px] font-[600] text-[#141415] font-inter mb-[6px]">Cantidad</label>
             <input
               type="number"
               placeholder="Cantidad"
@@ -129,7 +130,7 @@ const Scrap = () => {
                 required: "Cantidad es requerida", 
                 min: { value: 1, message: "Debe ser al menos 1" }, 
               })}
-              className="w-full h-[36px] pl-[8px] pr-[8px] bg-white text-xs outline-none font-normal text-gray-700 border border-gray-300 rounded"
+              className="w-full h-[36px] px-[8px] bg-white text-xs outline-none font-normal text-[#98A2B2] border border-[#E7E7E7] rounded-[6px]"
             />
             {errors.quantity && <p className="text-red-500 text-xs">{errors.quantity.message}</p>}
           </div>
@@ -140,7 +141,7 @@ const Scrap = () => {
         <div className="mt-6 text-left">
           <button
             type="submit"
-            className="w-[170px] h-[35px] bg-blue-570 text-white text-sm font-medium rounded hover:bg-blue-590"
+            className="w-[170px] h-[35px] bg-[#179FDB] text-white text-sm font-semibold rounded-[6px] hover:bg-[#2A6AB2]"
             onClick={handleSubmit(handleEnterScrap)}
           >
             Introducir Scrap

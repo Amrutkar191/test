@@ -88,7 +88,7 @@ export default function Orden() {
         <div className="flex flex-col w-full sm:w-auto self-start">
           <label className="invisible mb-1">Button</label>
           <button
-            className="w-full sm:w-[170px] h-[35px] bg-[#179FDB] text-white text-sm font-medium rounded-[6px]  hover:bg-blue-590"
+            className="w-full sm:w-[170px] h-[35px] bg-[#179FDB] text-white text-sm font-semibold rounded-[6px]  hover:bg-[#2A6AB2]"
             onClick={handleSubmit(handleStartOrder)}
 
           >
@@ -98,7 +98,7 @@ export default function Orden() {
       </div>
 
       {/* Timeline Tabs */}
-      <div className="bg-white p-4 rounded border-0">
+      <div className="bg-white p-4 rounded-[12px] border-0">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-[20px] leading-[22px] font-semibold font-inter">Timeline</h2>
           <div className="flex gap-1">
@@ -116,8 +116,8 @@ export default function Orden() {
         </div>
 
         {/* Data Table */}
-        <div className="overflow-x-auto rounded-[10px] border border-gray-50 font-inter">
-          <table className="min-w-full  table-auto">
+        <div className="overflow-x-auto rounded-[12px]  font-inter">
+          <table className="min-w-full   table-auto">
             <thead>
               <tr className="bg-[#2A6AB2] ">
                 {[
@@ -131,11 +131,11 @@ export default function Orden() {
                 ].map((header, index) => (
                   <th
                     key={index}
-                    className="text-white  h-auto font-semibold text-[14px] leading-[18px] px-4 py-4 text-left"
+                    className="text-white h-auto font-semibold text-[14px] leading-[18px] px-4 py-4 text-left"
                   >
                     <div className="flex items-center ">
                       {header}
-                      <img src={unfold} className={`h-[16px] ml-[9px]`} />
+                      <img src={unfold} className={`h-[16px] ml-[9px] cursor-pointer`} />
                     </div>
                   </th>
                 ))}
